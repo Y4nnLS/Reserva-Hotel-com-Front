@@ -113,7 +113,7 @@ namespace ReservaDeHotel.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("PrecoPorNoite")
-                        .HasColumnType("decimal(6,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("TipoDeQuarto")
                         .HasColumnType("TEXT");

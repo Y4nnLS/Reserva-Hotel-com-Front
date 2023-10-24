@@ -6,7 +6,7 @@ import { HoteisService } from 'src/app/hotel.service'; // Certifique-se de impor
 @Component({
   selector: 'app-hoteis',
   templateUrl: './hotel.component.html', // Substitua pelo caminho real do seu template
-  styleUrls: ['./hoteis.component.css'] // Substitua pelo caminho real do seu arquivo CSS
+  styleUrls: ['./hotel.component.css'] // Substitua pelo caminho real do seu arquivo CSS
 })
 export class HoteisComponent implements OnInit {
   formulario: any;

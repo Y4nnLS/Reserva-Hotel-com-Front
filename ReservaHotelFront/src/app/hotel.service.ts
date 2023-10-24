@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class HoteisService {
-  apiUrl = 'http://localhost:4200/Hotel';
+  apiUrl = 'http://localhost:5000/hotel';
 
   constructor(private http: HttpClient) { }
 
