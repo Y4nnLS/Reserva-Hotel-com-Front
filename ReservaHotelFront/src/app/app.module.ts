@@ -13,10 +13,14 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { HoteisService } from './hotel.service';
 import { HoteisComponent } from './components/hotel/hotel.component';
 
+import { ClientesService } from './clientes.service';
+import { ClientesComponent } from './components/clientes/clientes.component';
+
 @NgModule({
   declarations: [
     AppComponent, 
-    HoteisComponent
+    HoteisComponent, 
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,7 @@ import { HoteisComponent } from './components/hotel/hotel.component';
     ReactiveFormsModule,
     ModalModule.forRoot()
   ],
-  providers: [HttpClientModule, HoteisService],
+  providers: [HttpClientModule, HoteisService, ClientesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
