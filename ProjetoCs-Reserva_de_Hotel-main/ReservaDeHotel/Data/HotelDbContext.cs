@@ -16,7 +16,13 @@ public class HotelDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("DataSource=bancoGeral.db;Cache=Shared");
+        optionsBuilder.UseSqlite("Data Source=bancoGeral.db;Cache=Shared");
     }
-
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Hotel>()
+            .HasOne(h => h.Dono)           // Hotel tem um Dono
+            .WithMany(d => d.ListaHoteis)  // Dono pode ter vários hotéis
+            .HasForeignKey(h => h.IdDono); // A chave estrangeira em Hotel é IdDono
+    }
 }
