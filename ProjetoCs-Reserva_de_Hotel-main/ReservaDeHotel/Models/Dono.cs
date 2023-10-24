@@ -11,7 +11,7 @@ public class Dono
     public string? Login { get; set;}
     public string? Senha { get; set;}
     public List<Hotel>? ListaHoteis { get; set;}
-
+    public Hotel Hotel { get;set;}
     public Dono()
     {
         ListaHoteis = new List<Hotel>();

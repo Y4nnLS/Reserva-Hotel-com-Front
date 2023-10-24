@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ReservaDeHotel.Models;
 public class Hotel
@@ -11,7 +12,10 @@ public class Hotel
     public string? Descricao { get; set; }
     public string? ListaDeQuartos { get; set; }
     public double AvaliacaoMedia { get; set; }
-    public int IdDoDono { get; set; } // aqui teria que usar uma ForeignKey
     public int NumeroTotalDeQuartos { get; set; }
     public int NumeroDeQuartosDisponiveis { get; set; }
+
+    [ForeignKey("Dono")]
+    public int IdDono { get; set; } // aqui teria que usar uma ForeignKey
+    public Dono Dono {get; set;}
 }
