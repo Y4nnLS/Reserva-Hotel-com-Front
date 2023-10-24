@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuário\\Documents\\GitHub\\ProjetoCs-Reserva_de_Hotel\\ReservaDeHotel\\ReservaDeHotel.csproj": {}
+    "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuário\\Documents\\GitHub\\ProjetoCs-Reserva_de_Hotel\\ReservaDeHotel\\ReservaDeHotel.csproj": {
+    "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuário\\Documents\\GitHub\\ProjetoCs-Reserva_de_Hotel\\ReservaDeHotel\\ReservaDeHotel.csproj",
+        "projectUniqueName": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
         "projectName": "ReservaDeHotel",
-        "projectPath": "C:\\Users\\Usuário\\Documents\\GitHub\\ProjetoCs-Reserva_de_Hotel\\ReservaDeHotel\\ReservaDeHotel.csproj",
+        "projectPath": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
         "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuário\\Documents\\GitHub\\ProjetoCs-Reserva_de_Hotel\\ReservaDeHotel\\obj\\",
+        "outputPath": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config"
