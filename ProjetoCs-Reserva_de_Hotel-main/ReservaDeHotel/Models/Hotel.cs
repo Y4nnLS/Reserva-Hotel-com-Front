@@ -15,7 +15,7 @@ public class Hotel
     public int NumeroTotalDeQuartos { get; set; }
     public int NumeroDeQuartosDisponiveis { get; set; }
 
-    [ForeignKey("Dono")]
+    //[ForeignKey("Dono")]
     public int IdDono { get; set; } // aqui teria que usar uma ForeignKey
     public Dono Dono {get; set;}
 }

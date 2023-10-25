@@ -12,7 +12,7 @@ public class Comodidade
     public string? Descricao { get; set; }
     public bool Disponibilidade { get; set; }
 
-    [ForeignKey("Hotel")]
+    //[ForeignKey("Hotel")]
     public int IDHotel { get; set; }
     public Hotel Hotel {get; set;}
 

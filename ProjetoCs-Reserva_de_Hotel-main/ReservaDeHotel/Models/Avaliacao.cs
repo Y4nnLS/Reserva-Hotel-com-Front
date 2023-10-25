@@ -10,7 +10,7 @@ public class Avaliacao
     public string? Comentario { get; set;}
     public DateTime DataAvaliacao { get; set;}
     
-    [ForeignKey("Hotel")]
+    //[ForeignKey("Hotel")]
     public int IdHotel { get; set;} // aqui teria que usar uma ForeignKey
     public Hotel Hotel {get; set;}
 }

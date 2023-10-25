@@ -10,7 +10,7 @@ public class Pagamento
     public decimal Valor { get; set;} 
     public DateTime DataPagamento { get; set;}
 
-    [ForeignKey("ReservaHotel")]
+    //[ForeignKey("ReservaHotel")]
     public int IdReservaEstadia { get; set;} // aqui teria que usar uma ForeignKey
     public ReservaHotel ReservaHotel { get; set;}
 }
