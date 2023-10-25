@@ -11,5 +11,9 @@ public class Comodidade
     public decimal PrecoPorNoite { get; set; }
     public string? Descricao { get; set; }
     public bool Disponibilidade { get; set; }
+
+    [ForeignKey("Hotel")]
     public int IDHotel { get; set; }
+    public Hotel Hotel {get; set;}
+
 }

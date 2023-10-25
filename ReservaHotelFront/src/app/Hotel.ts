@@ -1,3 +1,5 @@
+import { Avaliacao } from './Avaliacao';
+
 export class Hotel {
     IDHotel: number = 0;
     Nome: string | null = null;
@@ -9,8 +11,4 @@ export class Hotel {
     IdDoDono: number = 0;
     NumeroTotalDeQuartos: number = 0;
     NumeroDeQuartosDisponiveis: number = 0;
-}
-
-export class Avaliacao {
-    // Defina os campos da avaliação aqui, se necessário
 }

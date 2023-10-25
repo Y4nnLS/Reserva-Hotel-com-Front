@@ -8,6 +8,6 @@ public class Cliente
     public string? Nome { get; set;}
     public int NumeroTelefone { get; set;}
     public string? Email { get; set;}
-    public string? Login { get; set;}
+    public string? Cpf { get; set;}
     public string? Senha { get; set;}
 }
