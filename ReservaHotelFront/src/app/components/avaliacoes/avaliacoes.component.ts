@@ -25,6 +25,7 @@ export class AvaliacoesComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const avaliacao: Avaliacao = this.formulario.value;
     this.avaliacoesService.cadastrar(avaliacao).subscribe(result => {
       alert('Avaliação inserida com sucesso.');

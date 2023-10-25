@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DonosService {
-  apiUrl = 'http://localhost:5000/dono';
+  apiUrl = 'http://localhost:4200/dono';
 
   constructor(private http: HttpClient) { }
 

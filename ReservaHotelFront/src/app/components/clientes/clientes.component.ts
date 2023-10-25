@@ -26,6 +26,7 @@ export class ClientesComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const cliente: Cliente = this.formulario.value;
     this.clientesService.cadastrar(cliente).subscribe(result => {
       alert('Cliente inserido com sucesso.');

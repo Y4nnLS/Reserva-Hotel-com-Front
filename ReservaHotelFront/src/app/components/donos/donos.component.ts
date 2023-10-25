@@ -27,9 +27,12 @@ export class DonosComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+  if (this.formulario.valid) {
     const dono: Dono = this.formulario.value;
     this.donosService.cadastrar(dono).subscribe(result => {
       alert('Dono inserido com sucesso.');
     });
   }
+}
+
 }
