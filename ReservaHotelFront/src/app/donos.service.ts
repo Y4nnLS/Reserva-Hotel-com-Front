@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DonosService {
-  apiUrl = 'http://localhost:4200/dono';
+  apiUrl = 'http://localhost:5000/dono';
 
   constructor(private http: HttpClient) { }
 
@@ -27,14 +27,14 @@ export class DonosService {
     return this.http.get<Dono>(url);
   }
 
-  cadastrar(Dono: Dono): Observable<any> {
+  cadastrar(dono: Dono): Observable<any> {
     const url = `${this.apiUrl}/cadastrar`;
-    return this.http.post<Dono>(url, Dono, httpOptions);
+    return this.http.post<Dono>(url, dono, httpOptions);
   }
 
-  atualizar(Dono: Dono): Observable<any> {
+  atualizar(dono: Dono): Observable<any> {
     const url = `${this.apiUrl}/atualizar`;
-    return this.http.put<Dono>(url, Dono, httpOptions);
+    return this.http.put<Dono>(url, dono, httpOptions);
   }
 
   excluir(id: number): Observable<any> {

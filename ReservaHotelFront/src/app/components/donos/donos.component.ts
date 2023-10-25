@@ -17,7 +17,7 @@ export class DonosComponent implements OnInit {
   ngOnInit(): void {
     this.tituloFormulario = 'Novo Dono';
     this.formulario = new FormGroup({
-      DonoId: new FormControl(null),
+      DonoId: new FormControl(0),
       Nome: new FormControl(null),
       NumeroTelefone: new FormControl(null),
       Email: new FormControl(null),
@@ -33,6 +33,6 @@ export class DonosComponent implements OnInit {
       alert('Dono inserido com sucesso.');
     });
   }
-}
+  }
 
 }

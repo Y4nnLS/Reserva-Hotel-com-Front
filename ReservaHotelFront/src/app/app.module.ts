@@ -41,15 +41,15 @@ import { ReservaHotelsComponent } from './components/reserva-hoteis/reserva-hote
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    HoteisComponent, 
-    ClientesComponent, 
-    AvaliacoesComponent, 
-    CidadesComponent, 
-    ComodidadesComponent, 
-    DonosComponent, 
-    EstadiaHotelComponent, 
-    PagamentosComponent, 
+    AppComponent,
+    AvaliacoesComponent,
+    CidadesComponent,
+    ClientesComponent,
+    ComodidadesComponent,
+    DonosComponent,
+    EstadiaHotelComponent,
+    HoteisComponent,
+    PagamentosComponent,
     ReservaHotelsComponent
   ],
   imports: [

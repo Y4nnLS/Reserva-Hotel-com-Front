@@ -7,10 +7,6 @@ export class Dono {
     Email: string | null = null;
     Login: string | null = null;
     Senha: string | null = null;
-    ListaHoteis: Hotel[] = [];
+    ListaHoteis: Hotel[] | null = null;
     Hotel: Hotel | null = null;
-
-    constructor() {
-        this.ListaHoteis = [];
-    }
 }
