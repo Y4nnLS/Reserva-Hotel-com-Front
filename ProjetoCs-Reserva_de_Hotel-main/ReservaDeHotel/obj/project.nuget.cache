@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "9rIQCtw6k1mvbENag/2Ens+BD8hKhbfRkUexvEi4c/DR5II2aMKeX3aP2pwU1awKew8hXI01/q6l3dIsb1n2PQ==",
-  "success": false,
+  "dgSpecHash": "adk7CNqg8vivUBOEp1PXuMbr5odIuWAGLOvbGPNngfUJ1i2SZZkvmtwhoPmFZzBa4pbZLwWcIuxK4ScTd050sw==",
+  "success": true,
   "projectFilePath": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuário\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.11\\microsoft.data.sqlite.core.7.0.11.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.11\\microsoft.entityframeworkcore.design.7.0.11.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.13\\microsoft.data.sqlite.core.7.0.13.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.13\\microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.13\\microsoft.entityframeworkcore.design.7.0.13.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.13\\microsoft.entityframeworkcore.inmemory.7.0.13.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.11\\microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.11\\microsoft.entityframeworkcore.sqlite.7.0.11.nupkg.sha512",
-    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.11\\microsoft.entityframeworkcore.sqlite.core.7.0.11.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.13\\microsoft.entityframeworkcore.relational.7.0.13.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.13\\microsoft.entityframeworkcore.sqlite.7.0.13.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.13\\microsoft.entityframeworkcore.sqlite.core.7.0.13.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.entityframeworkcore.tools.dotnet\\2.0.3\\microsoft.entityframeworkcore.tools.dotnet.2.0.3.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
@@ -92,15 +92,5 @@
     "C:\\Users\\Usuário\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore from 7.0.13 to 7.0.11. Reference the package directly from the project to select a different version. \r\n ReservaDeHotel -> Microsoft.EntityFrameworkCore.InMemory 7.0.13 -> Microsoft.EntityFrameworkCore (>= 7.0.13) \r\n ReservaDeHotel -> Microsoft.EntityFrameworkCore (>= 7.0.11)",
-      "libraryId": "Microsoft.EntityFrameworkCore",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }
