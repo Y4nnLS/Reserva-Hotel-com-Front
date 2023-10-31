@@ -29,6 +29,7 @@ export class HoteisComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const hotel: Hotel = this.formulario.value;
     this.hoteisService.cadastrar(hotel).subscribe(result => {
       alert('Hotel inserido com sucesso.');

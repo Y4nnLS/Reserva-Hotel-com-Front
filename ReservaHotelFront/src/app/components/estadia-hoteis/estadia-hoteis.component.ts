@@ -25,6 +25,7 @@ export class EstadiaHotelComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const estadiaHotel: EstadiaHotel = this.formulario.value;
     this.estadiaHotelService.cadastrar(estadiaHotel).subscribe(result => {
       alert('Estadia em hotel inserida com sucesso.');

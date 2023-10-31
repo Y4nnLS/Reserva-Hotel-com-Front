@@ -19,8 +19,8 @@ export class AvaliacoesComponent implements OnInit {
     this.formulario = new FormGroup({
       IDAvaliacao: new FormControl(null),
       Comentario: new FormControl(null),
-      Pontuacao: new FormControl(null),
-      Data: new FormControl(null)
+      Estrelas: new FormControl(null),
+      DataAvaliacao: new FormControl(null)
     });
   }
 

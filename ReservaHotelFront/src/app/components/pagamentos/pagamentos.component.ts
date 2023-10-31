@@ -26,6 +26,7 @@ export class PagamentosComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const pagamento: Pagamento = this.formulario.value;
     this.pagamentoService.cadastrar(pagamento).subscribe(result => {
       alert('Pagamento inserido com sucesso.');

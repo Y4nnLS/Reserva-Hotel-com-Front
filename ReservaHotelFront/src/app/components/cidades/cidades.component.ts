@@ -26,6 +26,7 @@ export class CidadesComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const cidade: Cidade = this.formulario.value;
     this.cidadesService.cadastrar(cidade).subscribe(result => {
       alert('Cidade inserida com sucesso.');

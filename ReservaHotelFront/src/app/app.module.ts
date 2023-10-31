@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
@@ -60,7 +57,18 @@ import { ReservaHotelsComponent } from './components/reserva-hoteis/reserva-hote
     ReactiveFormsModule,
     ModalModule.forRoot()
   ],
-  providers: [HttpClientModule, HoteisService, ClientesService, AvaliacoesService, CidadesService, ComodidadesService, DonosService, EstadiaHoteisService, PagamentosService, ReservaHoteisService],
+  providers: [
+    HttpClientModule,
+    HoteisService,
+    ClientesService,
+    AvaliacoesService,
+    CidadesService,
+    ComodidadesService,
+    DonosService,
+    EstadiaHoteisService,
+    PagamentosService,
+    ReservaHoteisService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

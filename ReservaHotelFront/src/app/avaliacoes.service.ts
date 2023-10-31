@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Avaliacao } from './Avaliacao'; // Certifique-se de importar a classe Avaliacao correta
+import { Avaliacao } from './Avaliacao';
 
 const httpOptions = {
   headers: new HttpHeaders({

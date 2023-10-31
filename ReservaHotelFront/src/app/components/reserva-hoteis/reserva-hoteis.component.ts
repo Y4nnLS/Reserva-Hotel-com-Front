@@ -24,6 +24,7 @@ export class ReservaHotelsComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const reservaHotel: ReservaHotel = this.formulario.value;
     this.reservaHotelService.cadastrar(reservaHotel).subscribe(result => {
       alert('Reserva de hotel inserida com sucesso.');

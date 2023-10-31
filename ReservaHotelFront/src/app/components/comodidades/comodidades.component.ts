@@ -27,6 +27,7 @@ export class ComodidadesComponent implements OnInit {
   }
 
   enviarFormulario(): void {
+    console.log('Método enviarFormulario() chamado.');
     const comodidade: Comodidade = this.formulario.value;
     this.comodidadesService.cadastrar(comodidade).subscribe(result => {
       alert('Comodidade inserida com sucesso.');
