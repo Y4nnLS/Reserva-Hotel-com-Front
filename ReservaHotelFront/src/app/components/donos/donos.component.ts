@@ -9,14 +9,14 @@ import { DonosService } from 'src/app/donos.service'; // Certifique-se de import
   styleUrls: ['./donos.component.css'] // Substitua pelo caminho real do seu arquivo CSS
 })
 export class DonosComponent implements OnInit {
-  formulario: any;
+  formularioDonos: any;
   tituloFormulario: string = '';
 
   constructor(private donosService: DonosService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Novo Dono';
-    this.formulario = new FormGroup({
+    this.formularioDonos = new FormGroup({
       Nome: new FormControl(null),
       NumeroTelefone: new FormControl(null),
       Email: new FormControl(null),
@@ -26,15 +26,11 @@ export class DonosComponent implements OnInit {
   }
 
   enviarFormulario(): void {
-    if (this.formulario.valid && this.formulario.value.nome) {
       console.log('Método enviarFormulario() chamado.');
-      const dono: Dono = this.formulario.value;
+      const dono: Dono = this.formularioDonos.value;
       this.donosService.cadastrar(dono).subscribe(result => {
         alert('Dono inserido com sucesso.');
       });
-    } else {
-      alert('O campo "nome" é obrigatório.');
     }
-  }
-
 }
+

@@ -6,9 +6,9 @@ import { AvaliacoesComponent } from './components/avaliacoes/avaliacoes.componen
 import { CidadesComponent } from './components/cidades/cidades.component';
 import { ComodidadesComponent } from './components/comodidades/comodidades.component';
 import { DonosComponent } from './components/donos/donos.component';
-import { EstadiaHotelComponent } from './components/estadia-hoteis/estadia-hoteis.component';
+import { EstadiaHotelComponent } from './components/estadiahoteis/estadiahoteis.component';
 import { PagamentosComponent } from './components/pagamentos/pagamentos.component';
-import { ReservaHotelsComponent } from './components/reserva-hoteis/reserva-hoteis.component';
+import { ReservaHotelsComponent } from './components/reservahoteis/reservahoteis.component';
 
 
 const routes: Routes = [

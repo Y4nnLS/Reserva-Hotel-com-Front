@@ -27,14 +27,14 @@ export class CidadesService {
     return this.http.get<Cidade>(url);
   }
 
-  cadastrar(Cidade: Cidade): Observable<any> {
+  cadastrar(cidade: Cidade): Observable<any> {
     const url = `${this.apiUrl}/cadastrar`;
-    return this.http.post<Cidade>(url, Cidade, httpOptions);
+    return this.http.post<Cidade>(url, cidade, httpOptions);
   }
 
-  atualizar(Cidade: Cidade): Observable<any> {
+  atualizar(cidade: Cidade): Observable<any> {
     const url = `${this.apiUrl}/atualizar`;
-    return this.http.put<Cidade>(url, Cidade, httpOptions);
+    return this.http.put<Cidade>(url, cidade, httpOptions);
   }
 
   excluir(id: number): Observable<any> {

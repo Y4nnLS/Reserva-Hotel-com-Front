@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { ReservaHotel } from './ReservaHotel'; // Certifique-se de importar a classe ReservaHotel correta
+import { EstadiaHotel } from './EstadiaHotel'; // Certifique-se de importar a classe EstadiaHotel correta
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,29 +12,29 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class ReservaHoteisService {
-  apiUrl = 'http://localhost:5000/reservahoteis';
+export class EstadiaHoteisService {
+  apiUrl = 'http://localhost:4200/estadiahotel';
 
   constructor(private http: HttpClient) { }
 
-  listar(): Observable<ReservaHotel[]> {
+  listar(): Observable<EstadiaHotel[]> {
     const url = `${this.apiUrl}/listar`;
-    return this.http.get<ReservaHotel[]>(url);
+    return this.http.get<EstadiaHotel[]>(url);
   }
 
-  buscar(id: number): Observable<ReservaHotel> {
+  buscar(id: number): Observable<EstadiaHotel> {
     const url = `${this.apiUrl}/buscar/${id}`;
-    return this.http.get<ReservaHotel>(url);
+    return this.http.get<EstadiaHotel>(url);
   }
 
-  cadastrar(ReservaHotel: ReservaHotel): Observable<any> {
+  cadastrar(EstadiaHotel: EstadiaHotel): Observable<any> {
     const url = `${this.apiUrl}/cadastrar`;
-    return this.http.post<ReservaHotel>(url, ReservaHotel, httpOptions);
+    return this.http.post<EstadiaHotel>(url, EstadiaHotel, httpOptions);
   }
 
-  atualizar(ReservaHotel: ReservaHotel): Observable<any> {
+  atualizar(EstadiaHotel: EstadiaHotel): Observable<any> {
     const url = `${this.apiUrl}/atualizar`;
-    return this.http.put<ReservaHotel>(url, ReservaHotel, httpOptions);
+    return this.http.put<EstadiaHotel>(url, EstadiaHotel, httpOptions);
   }
 
   excluir(id: number): Observable<any> {

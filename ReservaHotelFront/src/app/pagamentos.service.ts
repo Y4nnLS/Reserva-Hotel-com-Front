@@ -27,14 +27,14 @@ export class PagamentosService {
     return this.http.get<Pagamento>(url);
   }
 
-  cadastrar(Pagamento: Pagamento): Observable<any> {
+  cadastrar(pagamento: Pagamento): Observable<any> {
     const url = `${this.apiUrl}/cadastrar`;
-    return this.http.post<Pagamento>(url, Pagamento, httpOptions);
+    return this.http.post<Pagamento>(url, pagamento, httpOptions);
   }
 
-  atualizar(Pagamento: Pagamento): Observable<any> {
+  atualizar(pagamento: Pagamento): Observable<any> {
     const url = `${this.apiUrl}/atualizar`;
-    return this.http.put<Pagamento>(url, Pagamento, httpOptions);
+    return this.http.put<Pagamento>(url, pagamento, httpOptions);
   }
 
   excluir(id: number): Observable<any> {

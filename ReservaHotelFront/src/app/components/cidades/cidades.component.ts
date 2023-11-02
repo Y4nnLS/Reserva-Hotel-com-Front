@@ -9,15 +9,14 @@ import { CidadesService } from 'src/app/cidades.service'; // Certifique-se de im
   styleUrls: ['./cidades.component.css'] // Substitua pelo caminho real do seu arquivo CSS
 })
 export class CidadesComponent implements OnInit {
-  formulario: any;
+  formularioCidades: any;
   tituloFormulario: string = '';
 
   constructor(private cidadesService: CidadesService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Nova Cidade';
-    this.formulario = new FormGroup({
-      IdCidade: new FormControl(null),
+    this.formularioCidades = new FormGroup({
       Nome: new FormControl(null),
       Estado: new FormControl(null),
       País: new FormControl(null),
@@ -27,7 +26,7 @@ export class CidadesComponent implements OnInit {
 
   enviarFormulario(): void {
     console.log('Método enviarFormulario() chamado.');
-    const cidade: Cidade = this.formulario.value;
+    const cidade: Cidade = this.formularioCidades.value;
     this.cidadesService.cadastrar(cidade).subscribe(result => {
       alert('Cidade inserida com sucesso.');
     });

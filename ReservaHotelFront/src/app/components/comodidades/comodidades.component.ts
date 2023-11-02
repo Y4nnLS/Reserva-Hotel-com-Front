@@ -9,15 +9,14 @@ import { ComodidadesService } from 'src/app/comodidades.service'; // Certifique-
   styleUrls: ['./comodidades.component.css'] // Substitua pelo caminho real do seu arquivo CSS
 })
 export class ComodidadesComponent implements OnInit {
-  formulario: any;
+  formularioComodidades: any;
   tituloFormulario: string = '';
 
   constructor(private comodidadesService: ComodidadesService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Nova Comodidade';
-    this.formulario = new FormGroup({
-      IDComodidade: new FormControl(null),
+    this.formularioComodidades = new FormGroup({
       NumeroDoQuarto: new FormControl(null),
       TipoDeQuarto: new FormControl(null),
       PrecoPorNoite: new FormControl(null),
@@ -28,7 +27,7 @@ export class ComodidadesComponent implements OnInit {
 
   enviarFormulario(): void {
     console.log('Método enviarFormulario() chamado.');
-    const comodidade: Comodidade = this.formulario.value;
+    const comodidade: Comodidade = this.formularioComodidades.value;
     this.comodidadesService.cadastrar(comodidade).subscribe(result => {
       alert('Comodidade inserida com sucesso.');
     });

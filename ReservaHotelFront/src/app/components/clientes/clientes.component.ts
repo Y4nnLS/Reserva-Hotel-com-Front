@@ -9,14 +9,14 @@ import { ClientesService } from 'src/app/clientes.service'; // Certifique-se de 
   styleUrls: ['./clientes.component.css'] // Substitua pelo caminho real do seu arquivo CSS
 })
 export class ClientesComponent implements OnInit {
-  formulario: any;
+  formularioClientes: any;
   tituloFormulario: string = '';
 
   constructor(private clientesService: ClientesService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Novo Cliente';
-    this.formulario = new FormGroup({
+    this.formularioClientes = new FormGroup({
       nome: new FormControl(null),
       numeroTelefone: new FormControl(null),
       email: new FormControl(null),
@@ -27,7 +27,7 @@ export class ClientesComponent implements OnInit {
 
   enviarFormulario(): void {
     console.log('Método enviarFormulario() chamado.');
-    const cliente: Cliente = this.formulario.value;
+    const cliente: Cliente = this.formularioClientes.value;
     this.clientesService.cadastrar(cliente).subscribe(result => {
       alert('Cliente inserido com sucesso.');
     });

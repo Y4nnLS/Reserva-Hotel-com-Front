@@ -10,7 +10,6 @@ namespace ReservaDeHotel.Controllers
     public class HotelController : ControllerBase
     {
         private HotelDbContext _dbContext;
-
         public HotelController(HotelDbContext dbContext)
         {
             _dbContext = dbContext;

@@ -23,8 +23,8 @@ import { ComodidadesComponent } from './components/comodidades/comodidades.compo
 import { DonosService } from './donos.service';
 import { DonosComponent } from './components/donos/donos.component';
 
-import { EstadiaHoteisService } from './estadia-hoteis.service';
-import { EstadiaHotelComponent } from './components/estadia-hoteis/estadia-hoteis.component';
+import { EstadiaHoteisService } from './estadiahoteis.service';
+import { EstadiaHotelComponent } from './components/estadiahoteis/estadiahoteis.component';
 
 import { HoteisService } from './hotel.service';
 import { HoteisComponent } from './components/hotel/hotel.component';
@@ -32,8 +32,8 @@ import { HoteisComponent } from './components/hotel/hotel.component';
 import { PagamentosService } from './pagamentos.service';
 import { PagamentosComponent } from './components/pagamentos/pagamentos.component';
 
-import { ReservaHoteisService } from './reserva-hoteis.service';
-import { ReservaHotelsComponent } from './components/reserva-hoteis/reserva-hoteis.component';
+import { ReservaHoteisService } from './reservahoteis.service';
+import { ReservaHotelsComponent } from './components/reservahoteis/reservahoteis.component';
 
 
 @NgModule({

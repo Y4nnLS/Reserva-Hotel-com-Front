@@ -5,5 +5,5 @@ export class ReservaHotel {
     IdReserva: number = 0;
     NomeHospede: string | null = null;
     Pagamento: Pagamento[] | null = null;
-    Estadia: EstadiaHotel | null = null;
+    Estadia: EstadiaHotel[] | null = null;
 }

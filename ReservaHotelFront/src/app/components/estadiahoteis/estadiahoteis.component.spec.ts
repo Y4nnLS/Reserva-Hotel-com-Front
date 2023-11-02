@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EstadiaHotelComponent } from './estadia-hoteis.component';
+import { EstadiaHotelComponent } from './estadiahoteis.component';
 
 describe('EstadiaHoteisComponent', () => {
   let component: EstadiaHotelComponent;
