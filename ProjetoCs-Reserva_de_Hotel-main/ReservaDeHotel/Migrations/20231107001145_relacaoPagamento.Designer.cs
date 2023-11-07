@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReservaDeHotel.Data;
 
@@ -10,9 +11,11 @@ using ReservaDeHotel.Data;
 namespace ReservaDeHotel.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    partial class HotelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231107001145_relacaoPagamento")]
+    partial class relacaoPagamento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -260,7 +263,7 @@ namespace ReservaDeHotel.Migrations
 
             modelBuilder.Entity("ReservaDeHotel.Models.Pagamento", b =>
                 {
-                    b.Property<int?>("IdPagamento")
+                    b.Property<int>("IdPagamento")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -270,7 +273,10 @@ namespace ReservaDeHotel.Migrations
                     b.Property<string>("MetodoPagamento")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ReservaId")
+                    b.Property<int?>("PagamentoIdPagamento")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("ReservaIdReserva")
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal?>("Valor")
@@ -278,7 +284,9 @@ namespace ReservaDeHotel.Migrations
 
                     b.HasKey("IdPagamento");
 
-                    b.HasIndex("ReservaId");
+                    b.HasIndex("PagamentoIdPagamento");
+
+                    b.HasIndex("ReservaIdReserva");
 
                     b.ToTable("Pagamento");
                 });
@@ -368,11 +376,20 @@ namespace ReservaDeHotel.Migrations
 
             modelBuilder.Entity("ReservaDeHotel.Models.Pagamento", b =>
                 {
+                    b.HasOne("ReservaDeHotel.Models.Pagamento", null)
+                        .WithMany("Pagamentos")
+                        .HasForeignKey("PagamentoIdPagamento");
+
                     b.HasOne("ReservaDeHotel.Models.ReservaHotel", "Reserva")
                         .WithMany("Pagamento")
-                        .HasForeignKey("ReservaId");
+                        .HasForeignKey("ReservaIdReserva");
 
                     b.Navigation("Reserva");
+                });
+
+            modelBuilder.Entity("ReservaDeHotel.Models.Pagamento", b =>
+                {
+                    b.Navigation("Pagamentos");
                 });
 
             modelBuilder.Entity("ReservaDeHotel.Models.ReservaHotel", b =>

@@ -4,9 +4,10 @@ namespace ReservaDeHotel.Models;
 public class Avaliacao
 {
     [Key]
-    public int IdAvaliacao {get;set;}
-    public int IdHotel { get; set;} // aqui teria que usar uma ForeignKey
-    public int AvaliacaoEstrelas { get; set;}
+    public int? IdAvaliacao {get;set;}
+    public int? HotelId { get; set;}
+    public List<Hotel>? Hoteis { get; set;}
+    public int? AvaliacaoEstrelas { get; set;}
     public string? Comentario { get; set;}
-    public DateTime DataAvaliacao { get; set;}
+    public DateTime? DataAvaliacao { get; set;}
 }

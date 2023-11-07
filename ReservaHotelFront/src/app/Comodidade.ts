@@ -1,12 +1,12 @@
 import { Hotel } from './Hotel';
 
 export class Comodidade {
-    IDComodidade: number = 0;
-    NumeroDoQuarto: number = 0;
-    TipoDeQuarto: string | null = null;
-    PrecoPorNoite: number = 0;
-    Descricao: string | null = null;
-    Disponibilidade: boolean = false;
-    IDHotel: number = 0;
-    Hotel: Hotel | null = null;
+    iDComodidade: number = 0;
+    numeroDoQuarto: number = 0;
+    tipoDeQuarto: string = '';
+    precoPorNoite: number = 0;
+    descricao: string = '';
+    disponibilidade: boolean | undefined;
+    hotelId: number = 0;
+    hotel: Hotel | undefined;
 }

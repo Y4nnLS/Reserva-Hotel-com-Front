@@ -1,14 +1,16 @@
 import { Avaliacao } from './Avaliacao';
+import { Dono } from './Dono';
 
 export class Hotel {
-    IDHotel: number = 0;
-    Nome: string | null = null;
-    Endereco: string | null = null;
-    ListaAvaliacoes: Avaliacao[] | null = null;
-    Descricao: string | null = null;
-    ListaDeQuartos: string | null = null;
-    AvaliacaoMedia: number = 0;
-    IdDoDono: number = 0;
-    NumeroTotalDeQuartos: number = 0;
-    NumeroDeQuartosDisponiveis: number = 0;
+    idHotel: number = 0;
+    nome: string = '';
+    endereco: string = '';
+    avaliacoes: Avaliacao | undefined;
+    descricao: string = '';
+    listaDeQuartos: string = '';
+    avaliacaoMedia: number = 0;
+    donoId: number = 0;
+    dono: Dono | undefined;
+    numeroTotalDeQuartos: number = 0;
+    numeroDeQuartosDisponiveis: number = 0;
 }

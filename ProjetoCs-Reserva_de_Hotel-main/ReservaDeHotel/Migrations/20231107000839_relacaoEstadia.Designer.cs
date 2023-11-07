@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReservaDeHotel.Data;
 
@@ -10,27 +11,14 @@ using ReservaDeHotel.Data;
 namespace ReservaDeHotel.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    partial class HotelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231107000839_relacaoEstadia")]
+    partial class relacaoEstadia
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
-
-            modelBuilder.Entity("AvaliacaoHotel", b =>
-                {
-                    b.Property<int>("HoteisIDHotel")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ListaAvaliacoesIdAvaliacao")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("HoteisIDHotel", "ListaAvaliacoesIdAvaliacao");
-
-                    b.HasIndex("ListaAvaliacoesIdAvaliacao");
-
-                    b.ToTable("AvaliacaoHotel");
-                });
 
             modelBuilder.Entity("CidadeHotel", b =>
                 {
@@ -83,19 +71,21 @@ namespace ReservaDeHotel.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("AvaliacaoEstrelas")
+                    b.Property<int>("AvaliacaoEstrelas")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Comentario")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("DataAvaliacao")
+                    b.Property<DateTime>("DataAvaliacao")
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("HotelId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("IdAvaliacao");
+
+                    b.HasIndex("HotelId");
 
                     b.ToTable("Avaliacao");
                 });
@@ -241,6 +231,9 @@ namespace ReservaDeHotel.Migrations
                     b.Property<string>("Endereco")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("IdDoDono")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("ListaDeQuartos")
                         .HasColumnType("TEXT");
 
@@ -260,25 +253,33 @@ namespace ReservaDeHotel.Migrations
 
             modelBuilder.Entity("ReservaDeHotel.Models.Pagamento", b =>
                 {
-                    b.Property<int?>("IdPagamento")
+                    b.Property<int>("IdPagamento")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime?>("DataPagamento")
+                    b.Property<DateTime>("DataPagamento")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("IdReservaEstadia")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("MetodoPagamento")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ReservaId")
+                    b.Property<int?>("PagamentoIdPagamento")
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal?>("Valor")
+                    b.Property<int?>("ReservaHotelIdReserva")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Valor")
                         .HasColumnType("TEXT");
 
                     b.HasKey("IdPagamento");
 
-                    b.HasIndex("ReservaId");
+                    b.HasIndex("PagamentoIdPagamento");
+
+                    b.HasIndex("ReservaHotelIdReserva");
 
                     b.ToTable("Pagamento");
                 });
@@ -295,21 +296,6 @@ namespace ReservaDeHotel.Migrations
                     b.HasKey("IdReserva");
 
                     b.ToTable("ReservaHotel");
-                });
-
-            modelBuilder.Entity("AvaliacaoHotel", b =>
-                {
-                    b.HasOne("ReservaDeHotel.Models.Hotel", null)
-                        .WithMany()
-                        .HasForeignKey("HoteisIDHotel")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ReservaDeHotel.Models.Avaliacao", null)
-                        .WithMany()
-                        .HasForeignKey("ListaAvaliacoesIdAvaliacao")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("CidadeHotel", b =>
@@ -357,6 +343,15 @@ namespace ReservaDeHotel.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ReservaDeHotel.Models.Avaliacao", b =>
+                {
+                    b.HasOne("ReservaDeHotel.Models.Hotel", "Hotel")
+                        .WithMany("ListaAvaliacoes")
+                        .HasForeignKey("HotelId");
+
+                    b.Navigation("Hotel");
+                });
+
             modelBuilder.Entity("ReservaDeHotel.Models.Comodidade", b =>
                 {
                     b.HasOne("ReservaDeHotel.Models.Hotel", "Hotel")
@@ -368,11 +363,23 @@ namespace ReservaDeHotel.Migrations
 
             modelBuilder.Entity("ReservaDeHotel.Models.Pagamento", b =>
                 {
-                    b.HasOne("ReservaDeHotel.Models.ReservaHotel", "Reserva")
-                        .WithMany("Pagamento")
-                        .HasForeignKey("ReservaId");
+                    b.HasOne("ReservaDeHotel.Models.Pagamento", null)
+                        .WithMany("pagamentos")
+                        .HasForeignKey("PagamentoIdPagamento");
 
-                    b.Navigation("Reserva");
+                    b.HasOne("ReservaDeHotel.Models.ReservaHotel", null)
+                        .WithMany("Pagamento")
+                        .HasForeignKey("ReservaHotelIdReserva");
+                });
+
+            modelBuilder.Entity("ReservaDeHotel.Models.Hotel", b =>
+                {
+                    b.Navigation("ListaAvaliacoes");
+                });
+
+            modelBuilder.Entity("ReservaDeHotel.Models.Pagamento", b =>
+                {
+                    b.Navigation("pagamentos");
                 });
 
             modelBuilder.Entity("ReservaDeHotel.Models.ReservaHotel", b =>

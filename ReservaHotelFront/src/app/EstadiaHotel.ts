@@ -1,12 +1,10 @@
-export class EstadiaHotel {
-    IdEstadia: number = 0;
-    QtdQuartos: number = 0;
-    DataEntrada: Date = new Date();
-    DataSaida: Date = new Date();
+import { ReservaHotel } from "./ReservaHotel";
 
-    constructor(qtdQuartos: number, dataEntrada: Date, dataSaida: Date) {
-        this.QtdQuartos = qtdQuartos;
-        this.DataEntrada = dataEntrada;
-        this.DataSaida = dataSaida;
-    }
+export class EstadiaHotel {
+    idEstadia: number = 0;
+    qtdQuartos: number = 0;
+    dataEntrada: Date = new Date();
+    dataSaida: Date = new Date();
+    reservaId: number = 0;
+    reserva: ReservaHotel | undefined;
 }

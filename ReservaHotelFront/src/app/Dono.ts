@@ -1,12 +1,12 @@
 import { Hotel } from './Hotel';
 
 export class Dono {
-    DonoId: number = 0;
-    Nome: string | null = null;
-    NumeroTelefone: number = 0;
-    Email: string | null = null;
-    Login: string | null = null;
-    Senha: string | null = null;
-    ListaHoteis: Hotel[] | null = null;
-    Hotel: Hotel | null = null;
+    donoId: number = 0;
+    nome: string = '';
+    numeroTelefone: number = 0;
+    email: string = '';
+    login: string = '';
+    senha: string = '';
+    hotelId: number = 0;
+    hotel: Hotel | undefined;
 }
