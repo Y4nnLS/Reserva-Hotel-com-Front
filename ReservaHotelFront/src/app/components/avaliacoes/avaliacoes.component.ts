@@ -29,8 +29,9 @@ export class AvaliacoesComponent implements OnInit {
     });
     this.formularioAvaliacao = new FormGroup({
       comentario: new FormControl(null),
-      estrelas: new FormControl(null),
-      dataAvaliacao: new FormControl(null)
+      avaliacaoEstrelas: new FormControl(null),
+      dataAvaliacao: new FormControl(null),
+      hotelId: new FormControl(null)
     });
   }
 

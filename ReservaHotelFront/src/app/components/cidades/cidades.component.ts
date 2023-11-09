@@ -16,8 +16,7 @@ export class CidadesComponent implements OnInit {
   tituloFormulario: string = '';
   hoteis: Array<Hotel> | undefined;
 
-  constructor(private cidadesService: CidadesService,
-              private hoteisService: HoteisService) { }
+  constructor(private cidadesService: CidadesService, private hoteisService: HoteisService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Nova Cidade';
@@ -31,7 +30,8 @@ export class CidadesComponent implements OnInit {
       Nome: new FormControl(null),
       Estado: new FormControl(null),
       País: new FormControl(null),
-      Descricao: new FormControl(null)
+      Descricao: new FormControl(null),
+      hotelId: new FormControl(null)
     });
   }
 

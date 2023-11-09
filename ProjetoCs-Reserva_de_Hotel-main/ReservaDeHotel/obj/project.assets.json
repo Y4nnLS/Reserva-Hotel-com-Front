@@ -6046,19 +6046,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yann_\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuário\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yann_\\OneDrive\\Documentos\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
+      "projectUniqueName": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
       "projectName": "ReservaDeHotel",
-      "projectPath": "C:\\Users\\yann_\\OneDrive\\Documentos\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
-      "packagesPath": "C:\\Users\\yann_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yann_\\OneDrive\\Documentos\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\obj\\",
+      "projectPath": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
+      "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yann_\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -6128,7 +6128,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   }
