@@ -6051,11 +6051,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
+      "projectUniqueName": "C:\\Users\\Usuário\\Documents\\GitHub\\testecsharp\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
       "projectName": "ReservaDeHotel",
-      "projectPath": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
+      "projectPath": "C:\\Users\\Usuário\\Documents\\GitHub\\testecsharp\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\ReservaDeHotel.csproj",
       "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuário\\Documents\\GitHub\\Reserva-Hotel-com-Front\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\obj\\",
+      "outputPath": "C:\\Users\\Usuário\\Documents\\GitHub\\testecsharp\\ProjetoCs-Reserva_de_Hotel-main\\ReservaDeHotel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config"
