@@ -9,9 +9,9 @@
 <body>
     <div class="container p-5">
         <div class="row">
-          <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formularioReserva">
+          <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formularioReservaHotel">
             <h6>{{ tituloFormulario }}</h6>
-            <form [formGroup]="formularioReserva" (ngSubmit)="enviarFormulario()">
+            <form [formGroup]="formularioReservaHotel" (ngSubmit)="enviarFormulario()">
               <div class="form-group">
                 <label>Nome do Hóspede</label>
                 <input type="text" class="form-control form-control-sm" formControlName="NomeHospede" />

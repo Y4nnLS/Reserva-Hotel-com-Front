@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Hotel } from 'src/app/Hotel'; // Certifique-se de importar a classe Hotel correta
-import { HoteisService } from 'src/app/hotel.service'; // Certifique-se de importar o serviço de hotéis correto
+import { Hotel } from 'src/app/Hotel';
+import { HoteisService } from 'src/app/hotel.service';
 import { Avaliacao } from 'src/app/Avaliacao';
 import { AvaliacoesService } from 'src/app/avaliacoes.service';
 import { Dono } from 'src/app/Dono';
@@ -12,8 +12,8 @@ import { Observer } from 'rxjs';
 
 @Component({
   selector: 'app-hoteis',
-  templateUrl: './hotel.component.html', // Substitua pelo caminho real do seu template
-  styleUrls: ['./hotel.component.css'] // Substitua pelo caminho real do seu arquivo CSS
+  templateUrl: './hotel.component.html',
+  styleUrls: ['./hotel.component.css']
 })
 export class HoteisComponent implements OnInit {
   formulario: any;

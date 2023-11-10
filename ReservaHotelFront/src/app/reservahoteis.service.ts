@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ReservaHoteisService {
-  apiUrl = 'http://localhost:5000/reservahotel';
+  apiUrl = 'http://localhost:5000/reserva';
 
   constructor(private http: HttpClient) { }
 

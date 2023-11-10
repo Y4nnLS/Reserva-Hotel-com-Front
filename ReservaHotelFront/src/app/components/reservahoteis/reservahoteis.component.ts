@@ -1,29 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ReservaHotel } from 'src/app/ReservaHotel'; // Certifique-se de importar a classe ReservaHotel correta
-import { ReservaHoteisService } from 'src/app/reservahoteis.service'; // Certifique-se de importar o serviço de reserva de hotéis correto
+import { ReservaHotel } from 'src/app/ReservaHotel';
+import { ReservaHoteisService } from 'src/app/reservahoteis.service';
 import { Observer } from 'rxjs';
 @Component({
   selector: 'app-reservahotels',
-  templateUrl: './reservahoteis.component.html', // Substitua pelo caminho real do seu template
-  styleUrls: ['./reservahoteis.component.css'] // Substitua pelo caminho real do seu arquivo CSS
+  templateUrl: './reservahoteis.component.html',
+  styleUrls: ['./reservahoteis.component.css']
 })
 export class ReservaHotelsComponent implements OnInit {
-  formularioReserva: any;
+  formularioReservaHotel: any;
   tituloFormulario: string = '';
 
   constructor(private reservaHotelService: ReservaHoteisService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Nova Reserva de Hotel';
-    this.formularioReserva = new FormGroup({
+    this.formularioReservaHotel = new FormGroup({
       NomeHospede: new FormControl(null)
     });
   }
 
   enviarFormulario(): void {
     console.log('Método enviarFormulario() chamado.');
-    const reserva: ReservaHotel = this.formularioReserva.value;
+    const reserva: ReservaHotel = this.formularioReservaHotel.value;
     const observer: Observer<ReservaHotel> = {
         next(_result): void{
           alert('Modelo salvo com sucesso.');

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Dono } from 'src/app/Dono'; // Certifique-se de importar a classe Dono correta
-import { DonosService } from 'src/app/donos.service'; // Certifique-se de importar o serviço de donos correto
-import { Hotel } from 'src/app/Hotel'; // Certifique-se de importar a classe Hotel correta
-import { HoteisService } from 'src/app/hotel.service'; // Certifique-se de importar o serviço de hotéis correto
+import { Dono } from 'src/app/Dono';
+import { DonosService } from 'src/app/donos.service';
+import { Hotel } from 'src/app/Hotel';
+import { HoteisService } from 'src/app/hotel.service';
 import { Observer } from 'rxjs';
 
 @Component({
   selector: 'app-donos',
-  templateUrl: './donos.component.html', // Substitua pelo caminho real do seu template
-  styleUrls: ['./donos.component.css'] // Substitua pelo caminho real do seu arquivo CSS
+  templateUrl: './donos.component.html',
+  styleUrls: ['./donos.component.css']
 })
 export class DonosComponent implements OnInit {
   formularioDonos: any;

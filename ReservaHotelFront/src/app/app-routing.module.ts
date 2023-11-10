@@ -10,7 +10,6 @@ import { EstadiaHotelComponent } from './components/estadiahoteis/estadiahoteis.
 import { PagamentosComponent } from './components/pagamentos/pagamentos.component';
 import { ReservaHotelsComponent } from './components/reservahoteis/reservahoteis.component';
 
-
 const routes: Routes = [
   { path: 'avaliacao', component: AvaliacoesComponent },
   { path: 'cidade', component: CidadesComponent },
@@ -22,8 +21,6 @@ const routes: Routes = [
   { path: 'pagamento', component: PagamentosComponent },
   { path: 'reservahotel', component: ReservaHotelsComponent }
 ];
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

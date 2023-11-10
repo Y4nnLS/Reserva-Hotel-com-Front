@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Pagamento } from 'src/app/Pagamento'; // Certifique-se de importar a classe Pagamento correta
-import { PagamentosService } from 'src/app/pagamentos.service'; // Certifique-se de importar o serviço de pagamentos correto
+import { Pagamento } from 'src/app/Pagamento';
+import { PagamentosService } from 'src/app/pagamentos.service';
 import { Observer } from 'rxjs';
 import { ReservaHotel } from 'src/app/ReservaHotel';
 import { ReservaHoteisService } from 'src/app/reservahoteis.service';
 
 @Component({
   selector: 'app-pagamentos',
-  templateUrl: './pagamentos.component.html', // Substitua pelo caminho real do seu template
-  styleUrls: ['./pagamentos.component.css'] // Substitua pelo caminho real do seu arquivo CSS
+  templateUrl: './pagamentos.component.html',
+  styleUrls: ['./pagamentos.component.css']
 })
 export class PagamentosComponent implements OnInit {
   formularioPagamentos: any;

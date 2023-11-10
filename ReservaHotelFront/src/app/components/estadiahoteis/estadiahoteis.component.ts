@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { EstadiaHotel } from 'src/app/EstadiaHotel'; // Certifique-se de importar a classe EstadiaHotel correta
-import { EstadiaHoteisService } from 'src/app/estadiahoteis.service'; // Certifique-se de importar o serviço de estadia em hotéis correto
+import { EstadiaHotel } from 'src/app/EstadiaHotel';
+import { EstadiaHoteisService } from 'src/app/estadiahoteis.service';
+import { Observer } from 'rxjs';
 
 @Component({
   selector: 'app-estadiahotel',
-  templateUrl: './estadiahoteis.component.html', // Substitua pelo caminho real do seu template
-  styleUrls: ['./estadiahoteis.component.css'] // Substitua pelo caminho real do seu arquivo CSS
+  templateUrl: './estadiahoteis.component.html',
+  styleUrls: ['./estadiahoteis.component.css']
 })
 export class EstadiaHotelComponent implements OnInit {
-  formularioEstadia: any;
+  formularioEstadiaHotel: any;
   tituloFormulario: string = '';
 
   constructor(private estadiaHotelService: EstadiaHoteisService) { }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Nova Estadia em Hotel';
-    this.formularioEstadia = new FormGroup({
+    this.formularioEstadiaHotel = new FormGroup({
       QtdQuartos: new FormControl(null),
       DataEntrada: new FormControl(null),
       DataSaida: new FormControl(null)
@@ -25,9 +26,21 @@ export class EstadiaHotelComponent implements OnInit {
 
   enviarFormulario(): void {
     console.log('Método enviarFormulario() chamado.');
-    const estadiaHotel: EstadiaHotel = this.formularioEstadia.value;
-    this.estadiaHotelService.cadastrar(estadiaHotel).subscribe(result => {
-      alert('Estadia em hotel inserida com sucesso.');
-    });
-  }
+    const estadia: EstadiaHotel = this.formularioEstadiaHotel.value;
+    const observer: Observer<EstadiaHotel> = {
+        next(_result): void{
+          alert('Modelo salvo com sucesso.');
+        },
+        error(_error): void {
+          alert('Erro ao salvar!');
+        },
+        complete(): void {
+        },
+        };
+      if (estadia.idEstadia && !isNaN(Number(estadia.idEstadia))){
+        this.estadiaHotelService.atualizar(estadia).subscribe(observer);
+      } else{
+        this.estadiaHotelService.cadastrar(estadia).subscribe(observer);
+      }
+    }
 }

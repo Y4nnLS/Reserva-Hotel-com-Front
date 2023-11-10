@@ -9,9 +9,9 @@
 <body>
     <div class="container p-5">
         <div class="row">
-          <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formularioEstadia">
+          <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formularioEstadiaHotel">
             <h6>{{ tituloFormulario }}</h6>
-            <form [formGroup]="formularioEstadia" (ngSubmit)="enviarFormulario()">
+            <form [formGroup]="formularioEstadiaHotel" (ngSubmit)="enviarFormulario()">
               <div class="form-group">
                 <label>Quantidade de Quartos</label>
                 <input type="number" class="form-control form-control-sm" formControlName="QtdQuartos" />
