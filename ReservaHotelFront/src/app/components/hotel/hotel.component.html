@@ -37,12 +37,6 @@
             <input type="number" class="form-control form-control-sm" formControlName="numeroDeQuartosDisponiveis" />
           </div>
           <div class="form-group">
-            <label>Avaliação</label>
-            <select class="form-control form-control-sm" formControlName="avaliacaoId">
-              <option *ngFor="let avaliacao of avaliacoes" [value]="avaliacao.idAvaliacao">{{ avaliacao.idAvaliacao }}</option>
-            </select>
-          </div>
-          <div class="form-group">
             <label>Cidade</label>
             <select class="form-control form-control-sm" formControlName="cidadeId">
               <option *ngFor="let cidade of cidades" [value]="cidade.idCidade">{{ cidade.nome }}</option>
@@ -52,6 +46,12 @@
             <label>Dono</label>
             <select class="form-control form-control-sm" formControlName="donoId">
               <option *ngFor="let dono of donos" [value]="dono.donoId">{{ dono.nome }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Avaliação</label>
+            <select class="form-control form-control-sm" formControlName="avaliacaoId">
+              <option *ngFor="let avaliacao of avaliacoes" [value]="avaliacao.idAvaliacao">{{ avaliacao.idAvaliacao }}</option>
             </select>
           </div>
           <div class="container">
