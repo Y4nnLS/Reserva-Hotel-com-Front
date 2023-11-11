@@ -11,8 +11,8 @@ using ReservaDeHotel.Data;
 namespace ReservaDeHotel.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    [Migration("20231109165206_1")]
-    partial class _1
+    [Migration("20231110235019_teste")]
+    partial class teste
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -235,9 +235,6 @@ namespace ReservaDeHotel.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("AvaliacaoMedia")
-                        .HasColumnType("REAL");
-
                     b.Property<string>("Descricao")
                         .HasColumnType("TEXT");
 
@@ -288,7 +285,7 @@ namespace ReservaDeHotel.Migrations
 
             modelBuilder.Entity("ReservaDeHotel.Models.ReservaHotel", b =>
                 {
-                    b.Property<int>("IdReserva")
+                    b.Property<int?>("IdReserva")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 

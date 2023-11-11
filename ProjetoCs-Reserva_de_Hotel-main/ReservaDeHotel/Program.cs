@@ -21,7 +21,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors(opcoes => opcoes.AllowAnyOrigin().AllowAnyHeader());
+app.UseCors(opcoes => opcoes
+    .WithOrigins("http://localhost:4200")
+    .AllowAnyOrigin().AllowAnyHeader());
 app.UseAuthorization();
 
 app.MapControllers();

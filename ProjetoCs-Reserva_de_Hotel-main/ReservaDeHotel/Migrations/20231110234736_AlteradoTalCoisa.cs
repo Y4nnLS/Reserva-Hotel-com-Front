@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ReservaDeHotel.Migrations
 {
     /// <inheritdoc />
-    public partial class _1 : Migration
+    public partial class AlteradoTalCoisa : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -102,7 +102,6 @@ namespace ReservaDeHotel.Migrations
                     Endereco = table.Column<string>(type: "TEXT", nullable: true),
                     Descricao = table.Column<string>(type: "TEXT", nullable: true),
                     ListaDeQuartos = table.Column<string>(type: "TEXT", nullable: true),
-                    AvaliacaoMedia = table.Column<double>(type: "REAL", nullable: false),
                     NumeroTotalDeQuartos = table.Column<int>(type: "INTEGER", nullable: false),
                     NumeroDeQuartosDisponiveis = table.Column<int>(type: "INTEGER", nullable: false)
                 },

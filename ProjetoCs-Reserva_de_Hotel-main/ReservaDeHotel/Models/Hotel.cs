@@ -10,7 +10,6 @@ public class Hotel
     public List<Avaliacao>? ListaAvaliacoes { get; set;}
     public string? Descricao { get; set; }
     public string? ListaDeQuartos { get; set; }
-    public double AvaliacaoMedia { get; set; }
     public int NumeroTotalDeQuartos { get; set; }
     public int NumeroDeQuartosDisponiveis { get; set; }
     public List<Cidade>? Cidades { get; set;}

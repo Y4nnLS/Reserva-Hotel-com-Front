@@ -12,6 +12,7 @@ import { Observer } from 'rxjs';
 export class EstadiaHotelComponent implements OnInit {
   formularioEstadiaHotel: any;
   tituloFormulario: string = '';
+  
 
   constructor(private estadiaHotelService: EstadiaHoteisService) { }
 

@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EstadiaHoteisService {
-  apiUrl = 'http://localhost:4200/estadia';
+  apiUrl = 'http://localhost:5000/Estadia';
 
   constructor(private http: HttpClient) { }
 
