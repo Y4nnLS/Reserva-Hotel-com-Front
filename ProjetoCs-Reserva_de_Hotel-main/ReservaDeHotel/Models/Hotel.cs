@@ -8,6 +8,8 @@ public class Hotel
     public string? Nome { get; set; }
     public string? Endereco { get; set; }
     public List<Avaliacao>? ListaAvaliacoes { get; set;}
+    public int? ComodidadeId { get; set; }
+    public Comodidade? Comodidade {get;set;}
     public string? Descricao { get; set; }
     public string? ListaDeQuartos { get; set; }
     public int NumeroTotalDeQuartos { get; set; }
